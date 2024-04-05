@@ -77,6 +77,11 @@ impl AcPlugEvents {
             },
         })
     }
+
+    /// Whether AC is currently plugged or not
+    pub fn plugged(&self) -> bool {
+        self.plugged
+    }
 }
 
 impl futures_util::Stream for AcPlugEvents {
