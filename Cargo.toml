@@ -1,0 +1,16 @@
+[package]
+name = "acpid_plug"
+description = "Listen to AC adapter plug events from acpid"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/pop-os/acpid-listen"
+license = "MPL-2.0"
+keywords = ["battery", "acpi", "linux"]
+categories = [ "os::linux-apis" ]
+
+[dependencies]
+futures-util = "0.3.30"
+tokio = { version = "1.37.0", features = ["fs", "io-util", "net"] }
+
+[dev-dependencies]
+tokio = { version = "1.37.0", features = ["macros", "rt"] }
